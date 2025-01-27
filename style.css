@@ -18,15 +18,15 @@
 
 @font-face {
     font-family: 'archivo-narrow';
-    src: url('Archivo_Narrow/static/ArchivoNarrow-Medium.ttf');
+    src: url('fonts/Archivo_Narrow/static/ArchivoNarrow-Medium.ttf');
 }
 @font-face {
     font-family: 'archivo-narrow-bold';
-    src: url('Archivo_Narrow/static/ArchivoNarrow-SemiBold.ttf');
+    src: url('fonts/Archivo_Narrow/static/ArchivoNarrow-SemiBold.ttf');
 }
 @font-face {
     font-family: 'racing-sans-one';
-    src: url('Racing_Sans_One/RacingSansOne-Regular.ttf');
+    src: url('fonts/Racing_Sans_One/RacingSansOne-Regular.ttf');
 }
 
 @media (max-width: 990px) {
@@ -48,21 +48,23 @@ main {
 .navbar {
     height: 80px;
     margin-bottom: 20px;
+    z-index: 1;
+    padding: 0 !important;
 }
 
 .navbar-brand {
     font-family: 'racing-sans-one', sans-serif;
     font-size: clamp(28px, 33px, 6vw) !important;
     color: var(--light-blue) !important;
+    padding: 0px 0px 10px 25px !important;
 }
-
 
 .nav-link {
     font-family: 'archivo-narrow', sans-serif;
     font-size: 1.4rem !important;
     color: var(--dark-blue) !important;
     letter-spacing: 5%;
-    margin: 0 15px;
+    padding: 0px 25px 10px 25px !important;
     transition: 0.1s ease-in-out; 
     background-color: white !important;
 }
@@ -71,6 +73,9 @@ main {
     color:  #0a335c9d !important;
 }
 
+.collapse {
+    width: 100%;
+}
 
 .hero-section {
     margin-bottom: 30px;
@@ -202,4 +207,22 @@ main {
     font-family: 'racing-sans-one', sans-serif;
     font-size: clamp(20px, 36px, 4vw);
     color: var(--light-blue);
+}
+
+.opacity-layer {
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.opacity-layer.show {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 0;
 }
