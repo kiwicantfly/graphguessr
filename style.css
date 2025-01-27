@@ -14,6 +14,7 @@
     --dark-grey: #C4C4C4;
 
     --mb: 50px;
+    --max-width: 1200px;
 }
 
 @font-face {
@@ -38,18 +39,22 @@
 /*html {
     scroll-snap-type: y mandatory;
 }*/
-main {
+
+
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
+    width: 100vw;
+}   
 
 .navbar {
     height: 80px;
     margin-bottom: 20px;
-    z-index: 1;
+    margin: auto;
+    z-index: 2;
     padding: 0 !important;
+    max-width: var(--max-width);
 }
 
 .navbar-brand {
@@ -121,6 +126,7 @@ main {
     padding: 5px 15px;
     cursor: pointer;
     margin: 10px var(--mb);
+
 }
 
 #bouton-jouer {
@@ -148,6 +154,7 @@ main {
     align-items: center;
     margin-bottom: 40px;
     flex-wrap: wrap;
+    z-index: 0;
 }
 
 .section-container {
@@ -155,11 +162,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
+    width: 100vw;
 }
 
 .section {
+    max-width: var(--max-width);
     margin: 0px max(20px, 6vw) var(--mb) max(20px, 6vw);
     display: flex;
     flex-direction: row;
@@ -223,6 +230,12 @@ main {
 
 .opacity-layer.show {
     opacity: 1;
-    pointer-events: auto;
-    z-index: 0;
+    pointer-events: blueauto;
+    z-index: 1;
+}
+
+footer {
+    font-family: 'archivo-narrow', sans-serif;
+    color: #6a6a6a;
+    opacity: 0.8;
 }
