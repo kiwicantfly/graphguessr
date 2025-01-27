@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: #0A335C;
+    --light-blue: #5F9DF7;
+    --green: #6BCB77;
+    --red: #EE4266;
+    --yellow: #FACC00;
+    --light-grey: #E9E9E9;
+    --dark-grey: #C4C4C4;
+
+    --mb: 50px;
+}
+
+@font-face {
+    font-family: 'archivo-narrow';
+    src: url('Archivo_Narrow/static/ArchivoNarrow-Medium.ttf');
+}
+@font-face {
+    font-family: 'archivo-narrow-bold';
+    src: url('Archivo_Narrow/static/ArchivoNarrow-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'racing-sans-one';
+    src: url('Racing_Sans_One/RacingSansOne-Regular.ttf');
+}
+
+@media (max-width: 990px) {
+    .navbar-nav {
+        position: relative !important;
+      }
+   }
+
+/*html {
+    scroll-snap-type: y mandatory;
+}*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-family: 'racing-sans-one', sans-serif;
+    font-size: clamp(28px, 33px, 6vw) !important;
+    color: var(--light-blue) !important;
+}
+
+
+.nav-link {
+    font-family: 'archivo-narrow', sans-serif;
+    font-size: 1.4rem !important;
+    color: var(--dark-blue) !important;
+    letter-spacing: 5%;
+    margin: 0 15px;
+    transition: 0.1s ease-in-out; 
+    background-color: white !important;
+}
+
+.nav-link:hover {
+    color:  #0a335c9d !important;
+}
+
+
+.hero-section {
+    margin-bottom: 30px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero {
+    /*height: clamp(150px, 250px, 30vh);*/
+    width: clamp(200px, 440px, 35vw);
+    margin-bottom: 20px;
+
+}
+
+.hero-section h1 {
+    font-family: 'archivo-narrow-bold', sans-serif;
+    color: var(--dark-blue);
+    font-size: clamp(30px, 80px, 11vw);
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.hero-section h3 {
+    font-family: 'archivo-narrow', sans-serif;
+    color: var(--dark-blue);
+    opacity: 0.8;
+    font-size: clamp(20px, 28px, 4vw);
+    margin: 0px 25px 0px 25px;
+    text-align: center;
+
+}
+
+.button {
+    font-family: 'archivo-narrow-bold', sans-serif;
+    font-size: clamp(22px, 32px, 4vw);
+    border-radius: 10px;
+    transition: 0.1s ease-in-out;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 10px var(--mb);
+}
+
+#bouton-jouer {
+    color: var(--light-blue);
+    border: solid 3px var(--light-blue);
+    border-bottom: solid 7px var(--light-blue);
+    background-color: #C6E7FF;
+}
+
+#bouton-apprendre {
+    color: #a4a4a4;
+    border: solid 3px var(--dark-grey);
+    border-bottom: solid 7px var(--dark-grey);
+    background-color: var(--light-grey);
+}
+
+.button:hover {
+    opacity: 0.8;
+    scale: 1.05;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    margin: 0px max(20px, 6vw) var(--mb) max(20px, 6vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px #f6f6f6;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 750px) {
+    .section {
+        flex-wrap: wrap-reverse;
+    }
+    .section-middle {
+        flex-wrap: wrap !important;
+    }
+}
+
+/*
+.snap {
+    height: 100vh;
+    scroll-snap-align: start;
+}*/
+
+.section-image {
+    width: clamp(150px, 200px, 20vw);
+}
+
+.section-text-container p {
+    font-family: 'archivo-narrow', sans-serif;
+    color: var(--dark-blue);
+    opacity: 0.8;
+    font-size: clamp(18px, 28px, 2.5vw);
+}
+
+.section-text-container h2 {
+    font-family: 'archivo-narrow-bold', sans-serif;
+    color: var(--dark-blue);
+    font-size: clamp(18px, 32px, 4vw);
+
+}
+
+.section-text-container h2 span {
+    font-family: 'racing-sans-one', sans-serif;
+    font-size: clamp(20px, 36px, 4vw);
+    color: var(--light-blue);
+}
